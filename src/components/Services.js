@@ -33,12 +33,12 @@ class Services extends Component {
             <section>
                 <Title title="services" />
                 <div className="services-center">
-                    {this.state.services.map(service => (
-                        <ul style={{listStyle: 'none'}}>
-                            <li><h2>{service.icon}</h2></li>
-                            <li><h3>{service.title}</h3></li>
-                            <li>{service.info}</li>
-                        </ul>
+                    {this.state.services.map((service, index) => (
+                        <article className="service" style={{listStyle: 'none'}} key={index}>
+                            <span>{service.icon}</span>
+                            <h6>{service.title}</h6>
+                            <p>{service.info}</p>
+                        </article>
                     ))}
                 </div>
             </section>
