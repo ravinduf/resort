@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import Hero from '../components/Hero';
 
 function Rooms() {
     return (
         <div>
-            Hello from rooms
+            <Hero /> 
         </div>
     )
 }
