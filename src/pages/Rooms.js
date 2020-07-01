@@ -1,10 +1,22 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
+
 import Hero from '../components/Hero';
+import Banner from '../components/Banner';
 
 function Rooms() {
     return (
         <div>
-            <Hero hero="roomsHero"/> 
+            <Hero hero="roomsHero">
+            
+            <Banner title="our romms">
+              <Link to='/' className="btn-primary">
+                return home
+              </Link>
+            </Banner>
+            
+          
+            </Hero> 
         </div>
     )
 }
