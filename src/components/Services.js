@@ -34,7 +34,7 @@ class Services extends Component {
                 <Title title="services" />
                 <div className="services-center">
                     {this.state.services.map((service, index) => (
-                        <article className="service" style={{listStyle: 'none'}} key={index}>
+                        <article className="services" style={{listStyle: 'none'}} key={index}>
                             <span>{service.icon}</span>
                             <h6>{service.title}</h6>
                             <p>{service.info}</p>
