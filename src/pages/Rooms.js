@@ -4,7 +4,7 @@ import Hero from '../components/Hero';
 function Rooms() {
     return (
         <div>
-            <Hero /> 
+            <Hero hero="roomsHero"/> 
         </div>
     )
 }
