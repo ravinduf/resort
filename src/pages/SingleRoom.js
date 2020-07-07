@@ -36,7 +36,14 @@ class SingleRoom extends Component {
 
         return (
             <div>
-                <Hero /> 
+                <Hero hero='roomsHero' >
+                    <Banner title={`${name} room`}>
+                        <Link to='/rooms' className='btn-primary'>
+                            back to rooms
+                        </Link>
+                    </Banner>
+                </Hero > 
+
             </div>
         )
     }
