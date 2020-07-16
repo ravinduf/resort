@@ -17,7 +17,7 @@ class SingleRoom extends Component {
             defaultBcg
         };
     }
-    static contextType = RoomContext;
+    static contextType = RoomContext; // gets room component from context
     render() {
         const {getRoom} = this.context;
         const room = getRoom(this.state.slug);
@@ -33,7 +33,7 @@ class SingleRoom extends Component {
             )
         }
         
-        const {name, description, capacity, size, price, extras,
+        const {name, description, capacity, size, price, extras,  // destructures room component 
         breakfast, pets, images} = room;
 
         return (
