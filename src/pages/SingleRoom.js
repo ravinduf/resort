@@ -37,7 +37,8 @@ class SingleRoom extends Component {
         breakfast, pets, images} = room;
         
         const [mainImg, ...defaultImg] = images;
-
+        
+        console.log(pets)
         return (
             <div>
                 <StyledHero img={mainImg}>
@@ -61,7 +62,23 @@ class SingleRoom extends Component {
                             <h3>details</h3>
                             <p>{description}</p>
                         </article>
+                        
+                        <article className="info">
+                            <h3>info</h3>
+                            <h6>price: ${price}</h6>
+                            <h6>size: {size} SQFT</h6>
+                            <h6>
+                                max capacity : { capacity > 1 ? `${capacity} people`: `${capacity} person`}
+                            </h6>
+                            <h6>
+                                pets {pets ? `allowed` : `not allowed`}
+                            </h6>
+                            <h6>
+                                {breakfast && "free breakfast included"}
+                                
+                            </h6>
 
+                        </article>
                     </div>
                 </section>
 
