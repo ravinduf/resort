@@ -35,17 +35,35 @@ class SingleRoom extends Component {
         
         const {name, description, capacity, size, price, extras,  // destructures room component 
         breakfast, pets, images} = room;
+        
+        const [mainImg, ...defaultImg] = images;
 
         return (
             <div>
-                <StyledHero img={images[0]}>
+                <StyledHero img={mainImg}>
                     <Banner title={`${name} room`}>
                         <Link to='/rooms' className='btn-primary'>
                             back to rooms
                         </Link>
                     </Banner>
                 </StyledHero>
-                 
+                
+                <section className="single-room">
+                    <div className="single-room-images">
+                        {defaultImg.map((item, index) => (
+                            <img key={index} src={item} alt={name} /> 
+                        )
+                        )}
+                    </div>
+
+                    <div className="single-room-info">
+                        <article className="desc">
+                            <h3>details</h3>
+                            <p>{description}</p>
+                        </article>
+
+                    </div>
+                </section>
 
             </div>
         )
