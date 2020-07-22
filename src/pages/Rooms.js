@@ -3,20 +3,20 @@ import {Link} from 'react-router-dom';
 
 import Hero from '../components/Hero';
 import Banner from '../components/Banner';
+import RoomContainer from '../components/RoomContainer';
 
 function Rooms() {
     return (
         <div>
             <Hero hero="roomsHero">
-            
-            <Banner title="our romms">
-              <Link to='/' className="btn-primary">
-                return home
-              </Link>
-            </Banner>
-            
-          
+              <Banner title="our romms">
+                <Link to='/' className="btn-primary">
+                  return home
+                </Link>
+              </Banner>
             </Hero> 
+
+            <RoomContainer />
         </div>
     )
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import RoomsFilter from './RoomsFilter';
+import RoomsFilter from './RoomFilter';
 import RoomsList from './RoomList';
 
 function RoomsContainer() {
