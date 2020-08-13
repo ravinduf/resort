@@ -26,9 +26,9 @@ export default class RoomProvider extends Component {
         let featuredRooms = rooms.filter(room => room.featured === true )
         //console.log(featuredRooms);
         let maxPrice = Math.max(...rooms.map(room => room.price));
-        console.log(maxPrice);
+        //console.log(maxPrice);
         let maxSize = Math.max(...rooms.map(room => room.size));
-        console.log(maxSize);
+        //console.log(maxSize);
         this.setState({
             rooms,
             featuredRooms,
@@ -63,7 +63,7 @@ export default class RoomProvider extends Component {
         const type = event.target.type;
         const name = event.target.name;
         const value = event.target.type;
-        console.log(type, name, value);
+        console.log(`this is ${type}, this is ${name}, this is ${value}`);
     }
 
     filterRooms = () => {
