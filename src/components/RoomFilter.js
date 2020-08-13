@@ -31,12 +31,15 @@ function RoomFilter({rooms}) {
         return (<option value={item} key={index}>{item}</option>);
     });
 
-    let people = getUnique(rooms, 'cap')
+    let people = getUnique(rooms, 'capacity');
+    people = people.map((item, index) => (
+    <option key={index} value={item}>{item}</option>
+    ));
 
     return (
         <section className="filter-container">
             <Title title="search rooms"/>
-            <form className = "filter-form"></form>
+            <form className = "filter-form">
             {/* select type */}
             <div className="form-group">
                 <label htmlFor="type">room type</label>
@@ -50,11 +53,12 @@ function RoomFilter({rooms}) {
             <div className="form-group">
                 <label htmlFor="capacity">Guests</label>
                 <select name="capacity" id="capacity" value={capacity} className="form-control" onChange={handleChange}>
-                    {types}
+                    {people}
                 </select>
             </div>
 
             {/* end guest */}
+            </form>
         </section>
 
     )
