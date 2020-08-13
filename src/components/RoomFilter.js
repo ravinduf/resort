@@ -31,6 +31,8 @@ function RoomFilter({rooms}) {
         return (<option value={item} key={index}>{item}</option>);
     });
 
+    let people = getUnique(rooms, 'cap')
+
     return (
         <section className="filter-container">
             <Title title="search rooms"/>
@@ -44,6 +46,15 @@ function RoomFilter({rooms}) {
             </div>
 
             {/* end select type */}
+            {/* guests */}
+            <div className="form-group">
+                <label htmlFor="capacity">Guests</label>
+                <select name="capacity" id="capacity" value={capacity} className="form-control" onChange={handleChange}>
+                    {types}
+                </select>
+            </div>
+
+            {/* end guest */}
         </section>
 
     )
