@@ -60,11 +60,13 @@ export default class RoomProvider extends Component {
     }
 
     handleChange = event => {
-        const type = event.target.type;
+        const target = event.target
+        const value = event.type === 'checkbox' ? target.checked : target.value;
         const name = event.target.name;
-        const value = event.target.type;
-        console.log(`this is ${type}, this is ${name}, this is ${value}`);
-    }
+        this.setState({
+            [name]: value,
+        }, this.filterRooms)
+    };
 
     filterRooms = () => {
         console.log('hello');
